@@ -9,3 +9,4 @@ This is a collection of Hello World programs
 - Haskell (hello.hs)
 - RUN1718 asm (hello.run)
 - Bash (hello.sh)
+- Go (hello.go)
