@@ -1,0 +1,21 @@
+	.START 0
+
+	READ [x], R1		# R1 = Number to be written
+	
+	MOVE 0, R3		# R3 = loop counter
+
+loop:	CMPf 12, R3
+	JUMP.E end
+	
+	AND 0xff, R1, R2	# R2 = first 4 bits of R1
+	
+	WRITE R2, [-512]
+	
+	ADD 1, R3, R3
+	ROR 8, R1, R1
+	JUMP loop
+	
+end:	HALT
+
+x:	.DATA "HELLO WORLD"
+
