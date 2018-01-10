@@ -7,7 +7,7 @@
 loop:	CMPf 12, R3
 	JUMP.E end
 	
-	AND 0xff, R1, R2	# R2 = first 4 bits of R1
+	AND 0xff, R1, R2	# R2 = first 8 bits of R1
 	
 	WRITE R2, [-512]
 	
